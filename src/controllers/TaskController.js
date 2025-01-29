@@ -1,9 +1,9 @@
-const { TaskModel } = require('../Models/Task');
+const { TaskModel } = require('../models/Task');
 
 
 exports.taskList = async (req, res) => {
     try {
-        const response = await TaskModel.getTaskList();
+        const response = await TaskModel.TaskList();
         res.json(response);
     } catch (err) {
         res.status(500).json({ error: err.message });

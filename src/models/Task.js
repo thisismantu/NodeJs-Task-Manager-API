@@ -1,8 +1,8 @@
-const db = require('../../config/db'); // Ensure db is properly configured
-const { getPrefixedTableName } = require('../../config/dbUtils');
+const db = require('../config/db'); // Ensure db is properly configured
+const { getPrefixedTableName } = require('../config/dbUtils');
 
 // Get a list of tasks
-const getTaskList = async () => {
+const TaskList = async () => {
     try {
         const tableName = getPrefixedTableName('tasks');
         if (!tableName) {
@@ -47,6 +47,6 @@ const createTask = async (taskData) => {
 };
 
 module.exports = {
-    getTaskList,
+    TaskList,
     createTask
 };
